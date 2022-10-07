@@ -1,7 +1,11 @@
-<html>
+<!DOCTYPE html>
+<html lang="en"></html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login Page Form</title>
         <link rel="stylesheet" href="style.css">
+        <script src="loginscreen.js"></script>
     </head>
     <body>
         <div class="hero">
@@ -12,25 +16,25 @@
                     <button type="button" class="toggle-button" onclick="register()">Register</button>
                 </div>
                 <form id="login" class="user-input">
-                    <input type="text" class="input-from-user" placeholder="username" required>
-                    <input type="password" class="input-from-user" placeholder="password" required>
-                    <input type="checkbox" class="checkbox"><span>Remember Password</span>
+                    <input id="username" type="text" class="input-from-user" placeholder="username" required>
+                    <input id="password" type="password" class="input-from-user" placeholder="password" required>
+                    <input id="checkbox"type="checkbox" class="checkbox"><span>Remember Password</span>
                     <button type="submit" class="submit-button">Login</button>
                 </form>
                 <form id="register" class="user-input">
-                    <input type="text" class="input-from-user" placeholder="Username" required>
-                    <input type="email" class="input-from-user" placeholder="Email" required>
-                    <input type="password" class="input-from-user" placeholder="password" required>
-                    <input type="checkbox" class="checkbox" required><span>I agree to the terms and conditions</span>
-                    <button type="submit" class="submit-button">Register</button>
+                    <input id="username" type="text" class="input-from-user" placeholder="Username" required>
+                    <input id="email" type="email" class="input-from-user" placeholder="Email" required>
+                    <input id="password" type="password" class="input-from-user" placeholder="password" required>
+                    <input id="checkbox" type="checkbox" class="checkbox" required><span>I agree to the terms and conditions</span>
+                    <button  type="submit" class="submit-button">Register</button>
                 </form>
             </div>
             
         </div>
-        <script>
-            var x = document.getElementById("login");
-            var y = document.getElementById("register");
-            var z = document.getElementById("button");
+          <script>
+                var x = document.getElementById("login");
+                var y = document.getElementById("register");
+                var z = document.getElementById("button");
 
             function register(){
                 x.style.left="-400px";
@@ -42,6 +46,6 @@
                 y.style.left="450px";
                 z.style.left="0px";
              }
-        </script>
+        </script> 
     </body>
 </html>
