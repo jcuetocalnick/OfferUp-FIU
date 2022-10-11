@@ -15,7 +15,7 @@
                     <button type="button" class="toggle-button" onclick="login()">Log in</button>
                     <button type="button" class="toggle-button" onclick="register()">Register</button>
                 </div>
-                <form id="login" class="user-input">
+                <form id="login" class="user-input" action="/Users/TheForceIsStrongWithThisOne/Documents/OfferUp-FIU/examplenewpage.html">
                     <input id="username1" type="text" class="input-from-user" placeholder="username" required>
                     <div id="passwordValidation1">
                         <input id="password1" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
@@ -25,11 +25,6 @@
                     
                     <input id="checkbox"type="checkbox" class="checkbox"><span>Remember Password</span>
                     <button id="submitbutton" type="submit" class="submit-button">Login</button>
-                    <script type="text/javascript">
-                        document.getElementById("submitbutton").onclick = function () {
-                            location.href = "/Users/TheForceIsStrongWithThisOne/Documents/OfferUp-FIU/examplenewpage.html";
-                        };
-                    </script>
                 </form>
                 <form id="register" class="user-input">
                     <input id="username2" type="text" class="input-from-user" placeholder="Username" required>
