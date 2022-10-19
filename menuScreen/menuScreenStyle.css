@@ -1,0 +1,75 @@
+*{
+    margin:0;
+    padding: 0;
+    outline:none;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-image: url(https://panthersoft.fiu.edu/wp-content/uploads/sites/48/2015/10/background3.jpg); 
+}
+nav{
+    background: #171c24;;
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    padding: 0 100px;
+    
+}
+nav .navbar{
+    display:flex;
+    flex: 1;
+    list-style: none;
+    padding: 0 0 0 60px;
+}
+nav .navbar li{
+    padding: 0 15px;
+}
+nav .navbar li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight:500;
+}
+nav .navbar li a:hover{
+    color: #0d4669;
+}
+nav form{
+    display: flex;
+    height: 40px;
+    background: #1e232b;
+    min-width: 18%!important;
+    border: 1px solid rgba(155, 155 , 155,0.2);
+    border-radius : 2px;
+    padding: 2px;
+}
+nav form search-bar{
+    height: 100%;
+    width: 100%;
+    padding : 0 10px;
+    color: #fff;
+    font-weight: 500;
+    background : none;
+    border: none;
+     
+}
+nav form button{
+    width: 100%;
+    background: linear-gradient(to right,#0d4669,#38a0c2);
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    color: #fff;
+    border-radius: 2px; 
+    
+    
+}
+nav .logo{
+    color:#fff;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
