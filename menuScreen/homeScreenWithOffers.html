@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Menu Page </title>
+        <link rel="stylesheet" href="menuScreenStyle.css">
+        <!-- <script src="homeScreen.js"></script> -->
+
+</head>
+<body>
+        <nav>
+            <div class="logo">Panther Thirft</div>
+            <div class="navbar">
+                <li><a href ="#">Homepage</a></a></li>
+                <li><a href ="#">About</a></a></li>
+                <li><a href ="#">Messages</a></a></li>
+                <li><a href ="#">Contact us</a></a></li>
+                <li><a href ="#">Shopping Cart</a></a></li>
+            </div>
+            <form action="#">
+                <input placeholder="Search for items..."type="search" class="search-bar" required>
+                <button  class="search-button" type="submit">Submit</button>
+
+            </form>
+<!--             
+                <div class="scroll">
+                    <p style="background-color:powderblue;">
+                        With the idea of imparting programming 
+                        knowledge, Mr. Sandeep Jain, an IIT 
+                        Roorkee alumnus started a dream, 
+                        GeeksforGeeks. Whether programming 
+                        excites you or you feel stifled, 
+                        wondering how to prepare for interview 
+                        questions or how to ace data structures 
+                        and algorithms, GeeksforGeeks is a 
+                        one-stop solution. With every tick of 
+                        time, we are adding arrows in our quiver.
+                        From articles on various computer 
+                        science subjects to programming problems 
+                        for practice, from basic to premium courses,
+                        from technologies to entrance examinations, 
+                        we have been building ample content with 
+                        superior quality.
+                    </p>
+                </div> -->
+            </nav>
+            
+            
+                <ul id="totalOffers" >
+
+                    <script >
+                        let path = "/Users/TheForceIsStrongWithThisOne/Documents/OfferUp-FIU/itemOffers/";
+                        var imagepath = path + 'offer';
+                        let itemoffers = ['item 1', 'item 2', 'item 3', 'item 4', 'item 5'];
+                        let descriptions = [
+                        'desc item 1', 'desc item 2', 'desc item 3', 'desc item 4', 'desc item 5'
+                        ];
+                        let loc = ['Parkview', 'Parkview', 'Parkview','Parkview', 'Parkview'];
+                        let images = [];
+                        for (let i = 0; i < itemoffers.length; i++){
+                            let oneitem = document.createElement('li');
+                            let list = document.createElement('div');
+                            //list.innerText=itemoffers[i];
+                            var button = document.createElement('button');
+                            button.innerText = "Make Offer";
+
+                            var img = document.createElement('img');
+                            img.src = imagepath + i + 'image.jpeg'; // img[i] refers to the current URL.
+                            img.style.width = "140px";
+                            img.style.borderRadius = "10px";
+                           // img.setAttribute("width", "40%");
+                           // img.style.padding = "10px";
+                            
+                            var descript = document.createElement('p');
+                            descript.innerText = descriptions[i];
+                            descript.style.borderRadius = "10px";
+                            list.appendChild(img);
+                            list.appendChild(button);
+                            list.appendChild(descript);
+                            
+                            oneitem.style.backgroundColor = "#ADD8E6";
+                            oneitem.style.borderRadius = "10px";
+                            list.style.borderRadius = "10px";
+                            list.style.paddingBottom = "50px";
+                            list.style.marginBottom = "30px";
+                            oneitem.style.maxWidth = "50%";
+                            //oneitem.style.alignItems = "stretch";
+
+                            oneitem.appendChild(list);
+                            document.querySelector('#totalOffers').appendChild(oneitem);
+                        }
+                        
+                    </script>
+                    <!-- <li>
+                        <img src="Offerup.png" />
+                        <h2>Headline 2</h2>
+                        <p>Description 2 <br>with special line</p>
+                        <button>Button</button>
+                    </li>
+                    <li>
+                        <img src="Offerup.png" />
+                        <h2>Headline 2</h2>
+                        <p>Description 2 <br>with special line</p>
+                        <button>Button</button>
+                    </li>
+                    <li>
+                        <img src="Offerup.png" />
+                        <h2>Headline 2</h2>
+                        <p>Description 2 <br>with special line</p>
+                        <button>Button</button>
+                    </li> -->
+                </ul>
+    
+                
+                
+            </div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <div class="topnav">
+        <a class="active" href="#home">Homepage</a>
+        <a href="#account">Account</a>
+        <a href="#account">About us</a>
+        <a href="#account">Messages</a>  
+            <form action="" class="search-bar">
+                <input type="text" placeholder="Search for items..." name="itemSearched"> 
+                <button type="Submit"></button>
+            </form>
+    </div>
+    <div class="container">
+        
+        
+    </div>
+    </div>
+     -->
+</body>
+</html>

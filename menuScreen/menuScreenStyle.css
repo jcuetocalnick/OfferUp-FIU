@@ -15,8 +15,7 @@ nav{
     align-items: center;
     justify-content: space-between;
     height: 70px;
-    padding: 0 100px;
-    
+    padding: 100px;
 }
 nav .navbar{
     display:flex;
@@ -71,5 +70,24 @@ nav .logo{
     font-size: 30px;
     font-weight: 600;
     letter-spacing: -1px;
+}
+body .wrapper{
+    
+    
+    max-width: fit-content;
+    display:flex;
+    align-items: stretch;
+    justify-content: center;
+    column-count: 1;
+    padding: 0 100px;
+    scroll-padding-inline-end: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+body ul{
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    padding: 0 100px;
 }
 
