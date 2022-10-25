@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<body>
+<ul id="fullpage">
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  let path = "/Users/TheForceIsStrongWithThisOne/Documents/OfferUp-FIU/itemOffers/";
+    var imagepath = path + 'offer';
+  const itemnum = urlParams.get('id');
+  //document.getElementById("myid").innerHTML = myParam; 
+    let oneitem = document.createElement('li');
+    let item = document.createElement('div');
+    let bottompart = document.createElement('div');
+
+    var img = document.createElement('img');
+    img.src = imagepath + itemnum + 'image.jpeg'; 
+    img.style.width = "50%";
+    img.style.borderRadius = "10px";
+    // img.setAttribute("width", "40%");
+    // img.style.padding = "10px";
+
+    var descript = document.createElement('p');
+    descript.innerText = "Item "+ itemnum;
+    descript.style.borderRadius = "10px";
+    
+    bottompart.appendChild(descript);
+
+    item.appendChild(img);
+    item.appendChild(bottompart);
+  
+    item.style.maxHeight = "100px";
+    item.style.borderRadius = "10px";
+    item.style.paddingBottom = "20px";
+    item.style.marginBottom = "20px";
+    item.style.marginTop = "30px";
+   
+    oneitem.appendChild(item);
+    document.querySelector('#fullpage').appendChild(oneitem);
+  </script>
+</body>
+</html>

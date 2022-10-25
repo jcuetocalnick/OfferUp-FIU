@@ -52,22 +52,24 @@
                     <script >
                         let path = "/Users/TheForceIsStrongWithThisOne/Documents/OfferUp-FIU/itemOffers/";
                         var imagepath = path + 'offer';
-                        let itemoffers = ['item 1', 'item 2', 'item 3', 'item 4', 'item 5'];
+                        let itemoffers = ['item 1', 'item 2', 'item 3', 'item 4', 'item 5', 'item 6'];
                         let descriptions = [
-                        'desc item 1', 'desc item 2', 'desc item 3', 'desc item 4', 'desc item 5'
-                        ];
-                        let loc = ['Parkview', 'Parkview', 'Parkview','Parkview', 'Parkview'];
+                        'desc item 1', 'desc item 2', 'desc item 3', 'desc item 4', 'desc item 5', 'desc item 6'];
+                        let loc = ['Parkview', 'Parkview', 'Parkview','Parkview', 'Parkview', 'Parkview'];
                         let images = [];
                         for (let i = 0; i < itemoffers.length; i++){
                             let oneitem = document.createElement('li');
-                            let list = document.createElement('div');
+                            let item = document.createElement('div');
+                            let bottompart = document.createElement('div');
                             //list.innerText=itemoffers[i];
                             var button = document.createElement('button');
                             button.innerText = "Make Offer";
-
+                            button.addEventListener("click", function () {
+                                    window.open('/Users/TheForceIsStrongWithThisOne/Documents/OfferUp-FIU/checkOut/checkOutItem.html?id=' + i );
+                            });
                             var img = document.createElement('img');
                             img.src = imagepath + i + 'image.jpeg'; // img[i] refers to the current URL.
-                            img.style.width = "140px";
+                            img.style.width = "100%";
                             img.style.borderRadius = "10px";
                            // img.setAttribute("width", "40%");
                            // img.style.padding = "10px";
@@ -75,19 +77,25 @@
                             var descript = document.createElement('p');
                             descript.innerText = descriptions[i];
                             descript.style.borderRadius = "10px";
-                            list.appendChild(img);
-                            list.appendChild(button);
-                            list.appendChild(descript);
-                            
+
+                           
+                            bottompart.appendChild(button);
+                            bottompart.appendChild(descript);
+                            bottompart.style.maxHeight = "100px";
+                            item.appendChild(img);
+                            item.appendChild(bottompart);
+
                             oneitem.style.backgroundColor = "#ADD8E6";
                             oneitem.style.borderRadius = "10px";
-                            list.style.borderRadius = "10px";
-                            list.style.paddingBottom = "50px";
-                            list.style.marginBottom = "30px";
-                            oneitem.style.maxWidth = "50%";
-                            //oneitem.style.alignItems = "stretch";
+                            item.style.borderRadius = "10px";
+                            item.style.paddingBottom = "20px";
+                            item.style.marginBottom = "20px";
+                            item.style.marginTop = "30px";
+                            oneitem.style.maxWidth = "100px";
+                            oneitem.style.maxHeight = "300px";
+                          //  oneitem.style.alignContent = "stretch";
 
-                            oneitem.appendChild(list);
+                            oneitem.appendChild(item);
                             document.querySelector('#totalOffers').appendChild(oneitem);
                         }
                         

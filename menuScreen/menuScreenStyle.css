@@ -85,9 +85,11 @@ body .wrapper{
     margin-right: auto;
 }
 body ul{
-    columns: 2;
-    -webkit-columns: 2;
-    -moz-columns: 2;
-    padding: 0 100px;
+    columns: 3;
+    -webkit-columns: 3; 
+    /* -moz-columns: 3; */
+    /* padding: 0 50px; */
+   /* break-inside: auto; */
+   /* rows:2; */
 }
 
