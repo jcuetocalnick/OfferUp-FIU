@@ -8,41 +8,52 @@
     </head>
 
     <body>
-        <!-- <ul id="fullpage">
-        <script>
-            const urlParams = new URLSearchParams(window.location.search);
-            let path = "/Users/janet/MyProjectsCoding/OfferUp-FIU/itemOffers/";
-            var imagepath = path + 'offer';
-            const itemnum = urlParams.get('id');
-            //document.getElementById("myid").innerHTML = myParam; 
-            let oneitem = document.createElement('li');
-            let item = document.createElement('div');
-            let bottompart = document.createElement('div');
+        <div class = "product">
+            <div class = "product-content">
+                <div class = "product-img">
+                    <img id="image" alt = "product image">
+                    
+                </div>
+                <div class = "product-btns">
+                    <button type = "button"  class = "btn-cart"> Pay With Credit Card
+                        <span><i class = "fas fa-plus"></i></span>
+                    </button>
+                    <button type = "button" class = "btn-buy"> Paypal
+                        <span><i class = "fas fa-shopping-cart"></i></span>
+                    </button>
+                </div>
+            </div>
+            <div class = "product-info">
+                <div class = "product-info-top">
+                    <h2 class = "sm-title">Total Price</h2>
+                </div>
+                <!-- <h2 id=title class = "sm-title">Total Price</h2> -->
+                <a id=title href = "#" class = "product-name">blue couch for living area</a>
+                <p class = "product-price" id=oldprice >$ 100.00</p>
+                <p class = "product-price" id=newprice >$ 90.00</p>
 
-            var img = document.createElement('img');
-            img.src = imagepath + itemnum + 'image.jpeg'; 
-            img.style.width = "50%";
-            img.style.borderRadius = "10px";
-            // img.setAttribute("width", "40%");
-            // img.style.padding = "10px";
+                
+            </div>
 
-            var descript = document.createElement('p');
-            descript.innerText = "Item "+ itemnum;
-            descript.style.borderRadius = "10px";
-    
-             bottompart.appendChild(descript);
+            <div class = "off-info">
+                <h2 class = "sm-title" id="discount">10% off</h2>
+            </div>
 
-        item.appendChild(img);
-        item.appendChild(bottompart);
-  
-        item.style.maxHeight = "100px";
-        item.style.borderRadius = "10px";
-        item.style.paddingBottom = "20px";
-        item.style.marginBottom = "20px";
-        item.style.marginTop = "30px";
-   
-        oneitem.appendChild(item);
-        document.querySelector('#fullpage').appendChild(oneitem);
-    </script> -->
+            <script >
+                const urlParams = new URLSearchParams(window.location.search);
+                const item = urlParams.get('id');
+                const title = urlParams.get('title');
+                const oldprice = urlParams.get('oldprice');
+                const newprice = urlParams.get('newprice');
+                document.getElementById('image').src="/Users/TheForceIsStrongWithThisOne/Documents/OfferUp-FIU/images/" + item ;
+                document.getElementById('oldprice').innerText = " " + oldprice;
+                document.getElementById('newprice').innerText = " " + newprice;
+                document.getElementById('title').innerText = " " + title;
+                
+                var discount = (parseFloat(oldprice)- parseFloat(newprice)) / parseFloat(oldprice);
+                discount*= 100;
+                document.getElementById('discount').innerText = parseInt(discount) + "% off";
+           </script>
+        </div>
 </body>
 </html>
