@@ -1,7 +1,8 @@
 # OfferUp-FIU
 website that will allow FIU students to get access to a limited Offer-Up option where they can sell / buy products without having to get out of campus .
 
--User stories developed -
+-User stories developed-
+
 1- Account Feature:
 As a user, I want to be able to create an account so that  later I can access the app.
 As a user, I want to be able to log in using customized credentials so that I have a personalized app experience.
